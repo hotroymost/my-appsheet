@@ -220,7 +220,7 @@ const App: React.FC = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-4xl border shadow-[0_8px_8px_-4px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col justify-between p-6 h-full transform hover:-translate-y-1 transition-transform duration-200 border-t-8 border-t-red-500 hover:border-red-600"
+                className="bg-white rounded-4xl shadow-[0_8px_8px_-4px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col justify-between p-6 h-full transform hover:-translate-y-1 transition-transform duration-200 border-t-8 border-t-red-500 hover:border-red-600"
               >
                 <div className="mt-4 mb-16">
                   <h3 className="text-xl font-bold mb-4">{item.title}</h3>
@@ -250,7 +250,7 @@ const App: React.FC = () => {
           <h2 className="text-3xl font-bold mb-12">Khóa học mới nhất</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[1, 2, 3].map((id) => (
-              <div key={id} className="bg-white rounded-xl p-4 border hover:shadow-md transition">
+              <div key={id} className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition">
                 <h3 className="text-xl font-semibold mb-2">Khóa học #{id}</h3>
                 <p>Thời lượng: 12 buổi · Học online · Có cấp chứng chỉ</p>
                 <a
