@@ -75,7 +75,7 @@ const App: React.FC = () => {
             {/* Logo */}
             <a href="#home" className="flex justify-center items-center">
               <img
-                src="./src/image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg"
+                src="/image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg"
                 alt="Logo"
                 className="w-10 h-10 rounded-full object-cover"
               />
@@ -102,7 +102,7 @@ const App: React.FC = () => {
           <div className="md:hidden flex justify-between items-center">
             <a href="#home">
               <img
-                src="./src/image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg"
+                src="/image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg"
                 alt="Logo"
                 className="w-10 h-10 rounded-full object-cover"
               />
@@ -158,7 +158,7 @@ const App: React.FC = () => {
           {/* Container overflow-hidden chỉ cắt ảnh */}
           <div className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl">
             <img
-              src="./src/image/z6755125550962_9525f6174f87d316beabc91f16e798c4.jpg"
+              src="/image/z6755125550962_9525f6174f87d316beabc91f16e798c4.jpg"
               alt="Giải pháp chuyển đổi số"
               className={`w-full rounded-3xl shadow-lg ${
                 startAnimation ? 'animate-slide-up-slow' : 'initial-position-slow'
