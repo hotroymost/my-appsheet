@@ -4,6 +4,7 @@ import { Facebook, Instagram, Mail, MapPin, Menu, Phone, X, Youtube } from "luci
 const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     // Start all animations together after a short delay
@@ -13,6 +14,13 @@ const App: React.FC = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Lấy đường dẫn gốc của dự án từ Vite. Đây là cách chính xác nhất.
+  const baseURL = import.meta.env.BASE_URL;
+
+  const handleSendMessage = () => {
+    setModalOpen(true);
+  };
 
   return (
     <div className="bg-white min-h-screen text-gray-800">
@@ -69,13 +77,29 @@ const App: React.FC = () => {
         }
       `}</style>
 
+      {/* Modal for submission success */}
+      {modalOpen && (
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-[100]">
+          <div className="bg-white p-8 rounded-lg shadow-xl text-center">
+            <h3 className="text-xl font-bold mb-4">Gửi thành công!</h3>
+            <p>Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi sớm nhất có thể.</p>
+            <button
+              onClick={() => setModalOpen(false)}
+              className="mt-6 bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 transition"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
+
       <header className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full px-4">
         <div className="bg-white rounded-full shadow-lg max-w-[800px] mx-auto px-4 py-3">
           <div className="hidden md:grid grid-cols-5 items-center text-center">
             {/* Logo */}
             <a href="#home" className="flex justify-center items-center">
               <img
-                src="/image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg"
+                src={`${baseURL}image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg`}
                 alt="Logo"
                 className="w-10 h-10 rounded-full object-cover"
               />
@@ -102,7 +126,7 @@ const App: React.FC = () => {
           <div className="md:hidden flex justify-between items-center">
             <a href="#home">
               <img
-                src="/image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg"
+                src={`${baseURL}image/z6755125550946_9b321926cd5e1ff95f88619c6d558f76.jpg`}
                 alt="Logo"
                 className="w-10 h-10 rounded-full object-cover"
               />
@@ -158,7 +182,7 @@ const App: React.FC = () => {
           {/* Container overflow-hidden chỉ cắt ảnh */}
           <div className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl">
             <img
-              src="/image/z6755125550962_9525f6174f87d316beabc91f16e798c4.jpg"
+              src={`${baseURL}image/z6755125550962_9525f6174f87d316beabc91f16e798c4.jpg`}
               alt="Giải pháp chuyển đổi số"
               className={`w-full rounded-3xl shadow-lg ${
                 startAnimation ? 'animate-slide-up-slow' : 'initial-position-slow'
@@ -265,7 +289,7 @@ const App: React.FC = () => {
             <button
               type="button"
               className="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600"
-              onClick={() => alert('Form submitted!')}
+              onClick={handleSendMessage}
             >
               Gửi
             </button>
@@ -321,7 +345,7 @@ const App: React.FC = () => {
               <h4 className="font-semibold mb-4">Bản đồ doanh nghiệp</h4>
               <div className="aspect-video w-full rounded overflow-hidden border border-gray-700">
                 <iframe 
-                  src="" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.227409210777!2d106.62689687508781!3d10.793796589332115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b04f1f5f5f5%3A0x86e81f14f52f5c71!2sQu%E1%BA%ADn%20T%C3%A2n%20Ph%C3%BA%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh!5e0!3m2!1svi!2svn!4v1717865223408!5m2!1svi!2svn" 
                   width="100%" 
                   height="100%" 
                   style={{border: 0}} 
