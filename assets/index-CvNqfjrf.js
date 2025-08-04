@@ -106,7 +106,7 @@ Error generating stack: `+a.message+`
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const c1=[["path",{d:"M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17",key:"1q2vi4"}],["path",{d:"m10 15 5-3-5-3z",key:"1jp15x"}]],f1=oa("youtube",c1),i1=()=>{const[x,Q]=zt.useState(!1),[X,y]=zt.useState(!1),[G,C]=zt.useState(!1);zt.useEffect(()=>{const O=setTimeout(()=>{y(!0)},200);return()=>clearTimeout(O)},[]);const ul="/my-appsheet/",ml=()=>{C(!0)};return E.jsxs("div",{className:"bg-white min-h-screen text-gray-800",children:[E.jsx("style",{children:`
+ */const c1=[["path",{d:"M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17",key:"1q2vi4"}],["path",{d:"m10 15 5-3-5-3z",key:"1jp15x"}]],f1=oa("youtube",c1),i1=()=>{const[x,Q]=zt.useState(!1),[X,y]=zt.useState(!1),[G,C]=zt.useState(!1);zt.useEffect(()=>{const O=setTimeout(()=>{y(!0)},200);return()=>clearTimeout(O)},[]);const ul="/",ml=()=>{C(!0)};return E.jsxs("div",{className:"bg-white min-h-screen text-gray-800",children:[E.jsx("style",{children:`
         @keyframes slideUpFromBottom {
           from {
             transform: translateY(10px);
