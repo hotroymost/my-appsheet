@@ -362,17 +362,17 @@ const App: React.FC = () => {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <a href="#" className="hover:text-white">
-                    Hướng dẫn mua hàng
+                    Tài liệu hướng dẫn
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white">
-                    Chính sách bảo hành
+                    Bảo trì app
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white">
-                    Chính sách đổi trả
+                    App mẫu
                   </a>
                 </li>
                 <li>
@@ -389,15 +389,15 @@ const App: React.FC = () => {
               <div className="space-y-2 text-gray-400">
                 <div className="flex items-center">
                   <MapPin className="h-5 w-5 mr-2" />
-                  <span> Quận Tân Phú, TP.HCM</span>
+                  <span> Hai Bà Trưng, Hà Nội</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 mr-2" />
-                  <span>0123 456 789</span>
+                  <span>0398 213 009</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 mr-2" />
-                  <span>info@ymost.com</span>
+                  <span>hotro@ymost.com</span>
                 </div>
               </div>
             </div>
